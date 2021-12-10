@@ -14,7 +14,6 @@ class ThemePage extends StatelessWidget {
         title: const Text('Theme Selection'),
       ),
       body: ListView.builder(
-        key: const ValueKey('ThemeSelector'),
         padding: const EdgeInsets.all(8),
         itemCount: AppTheme.values.length,
         itemBuilder: (context, index) {
@@ -22,10 +21,12 @@ class ThemePage extends StatelessWidget {
           return Card(
             color: appThemeData[itemAppTheme]!.primaryColor,
             child: ListTile(
+              key: const ValueKey("ThemeDark"),
               title: Text(
+                
                 itemAppTheme.toString(),
-                key: const ValueKey('lightMode'),
               ),
+
               onTap: () {
                 var themebloc = BlocProvider.of<ThemeBloc>(context);
                 themebloc.add(ThemeToggle(itemAppTheme));

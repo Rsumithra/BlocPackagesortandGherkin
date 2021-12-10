@@ -48,6 +48,7 @@ class _TabPageState extends State<TabPage> with SingleTickerProviderStateMixin {
                 appBar: AppBar(
                   actions: <Widget>[
                     IconButton(
+                      key: const ValueKey('ThemeSelector'),
                       icon: const Icon(Icons.menu),
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
@@ -91,6 +92,7 @@ class _TabPageState extends State<TabPage> with SingleTickerProviderStateMixin {
         }),
         floatingActionButton: FloatingActionButton(
             child: const Icon(Icons.sort),
+            key: const ValueKey('filterIcon'),
             onPressed: () {
               showModalBottomSheet(
                   shape: RoundedRectangleBorder(

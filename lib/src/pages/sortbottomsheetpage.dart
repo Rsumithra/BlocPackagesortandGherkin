@@ -58,6 +58,7 @@ class _SortBottomsheet extends State<SortBottomsheet> {
                                 state, widget.contactData.tabIndex));
                             Navigator.pop(context);
                           },
+                          key: const ValueKey('Done'),
                           child: const Text(Constants.done),
                         ),
                       ],
@@ -84,6 +85,7 @@ class _SortBottomsheet extends State<SortBottomsheet> {
                           },
                           child: Text(
                             Constants.atoZ,
+                            key: const ValueKey('alphabeticASC'),
                             style: TextStyle(
                                 color: state == SortState.atoZ
                                     ? Colors.blue
@@ -101,6 +103,7 @@ class _SortBottomsheet extends State<SortBottomsheet> {
                           },
                           child: Text(
                             Constants.ztoA,
+                            key: const ValueKey('alphabeticDSC'),
                             style: TextStyle(
                                 color: state == SortState.ztoA
                                     ? Colors.blue
@@ -131,6 +134,7 @@ class _SortBottomsheet extends State<SortBottomsheet> {
                           },
                           child: Text(
                             Constants.asc,
+                            key: const ValueKey('numericASC'),
                             style: TextStyle(
                                 color: state == SortState.asc
                                     ? Colors.blue
@@ -148,6 +152,7 @@ class _SortBottomsheet extends State<SortBottomsheet> {
                           },
                           child: Text(
                             Constants.dsc,
+                            key: const ValueKey('numericDSC'),
                             style: TextStyle(
                                 color: state == SortState.dsc
                                     ? Colors.blue

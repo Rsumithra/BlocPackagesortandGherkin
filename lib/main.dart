@@ -22,6 +22,7 @@ class _ContactappState extends State<Contactapp> {
       child: BlocBuilder<ThemeBloc, AppTheme>(
         builder: (context, state) {
           AppTheme themeData = state;
+
           return MaterialApp(
             title: Constants.apptitle,
             theme: appThemeData[themeData],

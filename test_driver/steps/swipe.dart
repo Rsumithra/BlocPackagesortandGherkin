@@ -10,7 +10,7 @@ class Swipetab extends AndWithWorld<FlutterWorld> {
   @override
   Future<void> executeStep() async {
     final list = find.byValueKey('contactListView');
-    await world.driver?.scroll(list, 0, -2200, const Duration(seconds: 2));
+    await world.driver?.scroll(list, 0, -2400, const Duration(seconds: 2));
   }
 
   @override
